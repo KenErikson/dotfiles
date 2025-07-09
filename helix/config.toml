@@ -1,0 +1,17 @@
+# Linux and Mac: ~/.config/helix/config.toml
+# Windows: %AppData%\helix\config.toml
+# :config-open
+        
+theme = "gruvbox"
+
+[editor]
+line-number = "relative"
+# mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+a# normal = "block"
+# select = "underline"
+
+[editor.file-picker]
+# hidden = false
