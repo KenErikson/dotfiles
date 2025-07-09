@@ -1,7 +1,12 @@
+###
+# Helix Editor config
+###
+
+# :config-open
 # Linux and Mac: ~/.config/helix/config.toml
 # Windows: %AppData%\helix\config.toml
-# :config-open
-        
+
+# Theme list: https://helix-editor.vercel.app/reference/list-of-themes
 theme = "gruvbox"
 
 [editor]
@@ -10,7 +15,7 @@ line-number = "relative"
 
 [editor.cursor-shape]
 insert = "bar"
-a# normal = "block"
+# normal = "block"
 # select = "underline"
 
 [editor.file-picker]
