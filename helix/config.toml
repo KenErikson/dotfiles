@@ -7,7 +7,7 @@
 # Windows: %AppData%\helix\config.toml
 
 # Theme list: https://helix-editor.vercel.app/reference/list-of-themes
-theme = "gruvbox"
+theme = "dark_plus"
 
 [editor]
 line-number = "relative"
