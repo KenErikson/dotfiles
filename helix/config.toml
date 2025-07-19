@@ -18,5 +18,8 @@ insert = "bar"
 [editor.auto-save]
 focus-lost = true
 
+[editor.file-picker]
+git-ignore = false
+
 [keys.insert]
 "C-s" = "normal_mode"
