@@ -14,12 +14,16 @@ line-number = "relative"
 
 [editor.cursor-shape]
 insert = "bar"
+normal = "block"
+select = "underline"
 
 [editor.auto-save]
 focus-lost = true
 
+# https://docs.helix-editor.com/editor.html#editorfile-picker-section
 [editor.file-picker]
 git-ignore = false
-
-[keys.insert]
-"C-s" = "normal_mode"
+git-exclude = false
+git-global = false
+hidden = false
+ignore = false
