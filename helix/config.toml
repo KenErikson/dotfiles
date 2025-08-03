@@ -11,6 +11,10 @@ theme = "dark_plus"
 
 [editor]
 line-number = "relative"
+color-modes = true
+cursorline = true
+trim-final-newlines = true
+trim-trailing-whitespace = true
 
 [editor.cursor-shape]
 insert = "bar"
