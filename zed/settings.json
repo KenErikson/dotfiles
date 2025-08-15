@@ -27,5 +27,8 @@
       "milliseconds": 500
     }
   },
-  "ensure_final_newline_on_save": true
+  "ensure_final_newline_on_save": true,
+  "title_bar": {
+    "show_menus": true
+  }
 }
