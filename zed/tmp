@@ -1,8 +1,25 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
 [
   {
     "context": "Workspace",
     "bindings": {
       "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "ctrl-f": "buffer_search::Deploy",
+      "ctrl-r": "buffer_search::DeployReplace",
+      "ctrl-c": "editor::Copy",
+      "ctrl-v": "editor::Paste",
+      "ctrl-shift-c":"editor::ToggleComments",
     }
   },
   {
@@ -14,16 +31,26 @@
   {
     "context": "VimControl && !menu",
     "bindings": {
-      "w": "vim::NextWordStart",
-      "W": ["workspace::SendKeystrokes", "ctrl+shift+å w escape"],
-      // "W": [ "vim::ToggleVisual","vim::NextWordStart"],
-      "alt-w": ["vim::Word", { "ignore_punctuation": true }],
-      "alt-W": "vim::NextWordStart",
-      "e": "vim::NextWordEnd",
-      "b": "vim::PreviousWordStart",
+      "w": "vim::NextSubwordStart",
+      "W": "editor::SelectToNextWordEnd",
+      "alt-w": ["vim::NextWordStart", { "ignore_punctuation": true }],
+      "alt-shift-W": "editor::SelectToNextWordEnd",
       
-      // "v": null,
-      "shift+v": null,
-      "ctrl+shift+å": "vim::SwitchToVisualMode" }
-  }
+      "e": "vim::NextWordEnd",
+      "E": "editor::SelectToNextWordEnd",
+      "alt-e": ["vim::NextWordEnd", { "ignore_punctuation": true }],
+      "alt-shift-E": "editor::SelectToNextWordEnd",
+      
+      "b": "vim::PreviousWordStart",
+      "B": "editor::SelectToPreviousWordStart",
+      "alt-b": ["vim::PreviousWordStart", { "ignore_punctuation": true }],
+      "alt-shift-B": "editor::SelectToPreviousWordStart",
+
+      "shift-v": null,
+      "ctrl-j": "editor::MoveLineDown",
+      "ctrl-k": "editor::MoveLineUp",
+      
+      "backspace": "editor::Delete"
+    }
+  },
 ]
