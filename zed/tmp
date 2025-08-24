@@ -20,6 +20,8 @@
       "ctrl-c": "editor::Copy",
       "ctrl-v": "editor::Paste",
       "ctrl-shift-c":"editor::ToggleComments",
+      "ctrl-a": "editor::SelectAll",
+      "ctrl-x": "editor::Cut"
     }
   },
   {
