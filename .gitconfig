@@ -1,0 +1,17 @@
+[user]
+	name = Ken Erikson
+	email = ken@hibox.fi
+	signingkey = /Users/ken/.ssh/id_gitlab.pub
+[push]
+	default = upstream
+	autoSetupRemote = true
+[core]
+	autocrlf = false
+	editor = hx
+[branch]
+	autosetuprebase = always
+[color]
+	ui = auto
+[gpg]
+	program = gpg
+	format = ssh
