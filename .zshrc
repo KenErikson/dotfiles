@@ -33,7 +33,7 @@ alias ken-mysql='sudo mysql hiboxcentre -e "show tables";sudo mysql hiboxcentre'
 
 alias gitpush='git push --set-upstream origin $(git symbolic-ref --short HEAD)'
 alias gitca='git commit -a --amend --no-edit'
-alias gitpm='git fetch upstream master:upstream-master'
+# alias gitpm='git fetch upstream master:upstream-master'
 alias gitrebaseupstream='git rebase -X ours upstream-master'
 
 alias ken-update-locks="~/git/dev/scripts/update-dependency-locks.sh"
@@ -66,6 +66,9 @@ alias ken-db-sanity='nano ~/tomcat9/bin/setenv.sh'
 alias ken-centraln-psql='psql -h localhost -p 15432 -U centraln centraln'
 alias ken-centraln-serve='cd /Users/ken/randomGits/centraln/;make serve'
 alias dotgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias nano='hx'
+alias vi='hx'
+alias vim='hx'
 
 source /Users/ken/.docker/init-zsh.sh || true # Added by Docker Desktop
 source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
@@ -114,6 +117,26 @@ eval "$(direnv hook zsh)"
   else
     echo "Must be 1 args: <tag>"
   fi
+}
+
+grpo() {
+    IFS_ORIGINAL=$IFS
+    IFS=$'\n'
+    for line in $(git remote prune origin); do
+        echo $line
+        if [[ "$line" == *" [pruned] "* ]]; then
+            echo "$line" | awk '{print $3}' | cut -d '/' -f 2- | xargs git branch -D
+        fi
+    done
+    IFS=$IFS_ORIGINAL
+}
+
+# Function to pull-rebase all main/master branches
+gitpm() {
+    git fetch -v upstream master:upstream-master && return
+    git fetch -v upstream main:upstream-main && return
+    git fetch -v origin master:master && return
+    git fetch -v origin main:main && return
 }
 
 HISTSIZE=20000

@@ -6,30 +6,18 @@
 // To see the default key bindings run `zed: open default keymap`
 // from the command palette.
 [
-  // {
-  // "context": "Workspace",
-  // "bindings": {
-  // "shift shift": "file_finder::Toggle"
-  //   }
-  // },
-  // {
-  //  "context": "Editor && vim_mode == insert",
-  //   "bindings": {
-  //     "j k": "vim::NormalBefore"
-  //   }
-  // },
-  // {
-  //   "context": "VimControl && !menu",
-  //   "bindings": {
-  //     "w": "vim::NextWordStart",
-  //     // "W": ["workspace::SendKeystrokes", "ctrl+shift+å w escape"],
-  //     // "W": [ "vim::ToggleVisual","vim::NextWordStart"],
-  //     "alt-w": ["vim::Word", { "ignore_punctuation": true }],
-  //     "alt-W": "vim::NextWordStart",
-  //     "e": "vim::NextWordEnd",
-  //     "b": "vim::PreviousWordStart",
-  //     "v": null,
-  //     "shift+v": null
-  //     // "ctrl+shift+å": "vim::SwitchToVisualMode" }
-  // }}
+  {
+   "context": "Editor && vim_mode == insert",
+    "bindings": {
+      "j k": "vim::NormalBefore"
+    }
+  },
+  {
+      "context": "VimControl && !menu",
+      "bindings": {
+        "ctrl-k": "editor::MoveLineUp",
+        
+        "ctrl-j": "editor::MoveLineDown"
+      }
+  }
 ]
