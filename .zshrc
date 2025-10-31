@@ -133,10 +133,10 @@ grpo() {
 
 # Function to pull-rebase all main/master branches
 gitpm() {
-    git fetch -v upstream master:upstream-master && return
-    git fetch -v upstream main:upstream-main && return
-    git fetch -v origin master:master && return
-    git fetch -v origin main:main && return
+    git fetch -v upstream master:upstream-master 2> /dev/null && return
+    git fetch -v upstream main:upstream-main 2> /dev/null && return
+    git fetch -v origin master:master 2> /dev/null && return
+    git fetch -v origin main:main 2> /dev/null && return
 }
 
 HISTSIZE=20000
